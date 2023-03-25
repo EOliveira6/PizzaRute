@@ -17,17 +17,17 @@ const db = DatabaseConnection.getConnection();
 
 const RegisterCategory = ({ navigation }) => {
 
-  
+
   let [categoryDescription, setCategoryDescription] = useState('');
-  
+
 
   let register_category = () => {
     console.log(categoryDescription);
 
-     /* if (!productId) {
-      alert('Por favor preencha o código !');
-      return;
-    }  */
+    /* if (!productId) {
+     alert('Por favor preencha o código !');
+     return;
+   }  */
 
     if (!categoryDescription) {
       alert('Por favor preencha a descrição !');
@@ -71,25 +71,26 @@ const RegisterCategory = ({ navigation }) => {
               behavior="padding"
               style={{ flex: 1, justifyContent: 'space-between' }}>
 
-              <Mytextinput
+            {/*   <Mytextinput
                 placeholder="Código"
-               /*  onChangeText={
+                onChangeText={
                   () => setCategoryId()
-                }  */
+                }
                 maxLength={10}
                 keyboardType="numeric"
                 style={{ padding: 10 }}
-              /> 
+              />
+ */}
               <Mytextinput
-                placeholder="Entre com a descrição"
+                placeholder="Entre com o nome"
                 onChangeText={
                   (categoryDescription) => setCategoryDescription(categoryDescription)
                 }
                 style={{ padding: 10 }}
               />
-              
-             
-              
+
+
+
 
 
               <Mybutton title="Salvar" customClick={register_category} />
