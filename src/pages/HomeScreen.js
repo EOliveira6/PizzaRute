@@ -25,6 +25,13 @@ const HomeScreen = ({ navigation }) => {
               customClick={() => navigation.navigate('CategoryScreen')}
             />
 
+            <MyImageButton
+              title="Vendas"
+              btnColor='#5bb984'
+              btnIcon="user-plus"
+              customClick={() => navigation.navigate('SalesScreen')}
+            />
+
           </View>
         </View>
 
